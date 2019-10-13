@@ -1,10 +1,15 @@
+
+// Still got some error
 #include<stdio.h>
 
  int n;
 void Display(int *arr){
     for(int i=0;i<n;i++){
-    for(int j=0; j<n; j++)
-        printf("%d ",*((arr+i*n)+j));
+    for(int j=0; j<n; j++){
+    if(j==0)printf("%d",*((arr+i*n)+j));
+    else printf("   %d",*((arr+i*n)+j));
+    }
+
     printf("\n");
     }
 
