@@ -1,5 +1,5 @@
 
-// Still got some error
+// Still got presentation some error
 #include<stdio.h>
 
  int n;
@@ -23,6 +23,7 @@ int main()
     int arr[n][n], p,q;
     int val;
 
+
     for(int i=0; i<n; i++){
          val=i+1;
         for(int j=0; j<n; j++){
@@ -33,6 +34,12 @@ int main()
             else
                 arr[i][j]=val++ ;
         }
+    }
+    for(int i=2; i<n;i++){
+        val=i+1;
+    for(int j=0;j<i;j++){
+        arr[i][j]=val--;
+    }
     }
     Display(*arr);
     }while(n!=0);
