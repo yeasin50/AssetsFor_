@@ -1,0 +1,182 @@
+router A>>
+==========
+
+en
+conf t 
+int fa1/0
+ip add 192.168.1.2 255.255.255.252
+no shut
+exit
+
+int fa2/0
+ip add 192.168.10.1 255.255.255.248
+no shut
+exit
+
+router B>>
+==========
+
+en
+conf t 
+int fa0/0
+ip add 192.168.2.1 255.255.255.252
+no shut
+exit
+
+int fa1/0
+ip add 192.168.1.1 255.255.255.252
+no shut
+exit
+
+router C>>
+==========
+
+en
+conf t 
+int fa0/0
+ip add 192.168.2.2 255.255.255.252
+no shut
+exit
+
+int fa1/0
+ip add 192.168.3.1 255.255.255.252
+no shut
+
+exit
+int fa2/0
+ip add 192.168.5.1 255.255.255.252
+no shut
+exit
+
+router D>>
+==========
+
+en
+conf t 
+int fa0/0
+ip add 192.168.6.1 255.255.255.252
+no shut
+exit
+
+int fa1/0
+ip add 192.168.5.2 255.255.255.252
+no shut
+
+router E>>
+==========
+
+en
+conf t 
+int fa1/0
+ip add 192.168.7.2 255.255.255.252
+no shut
+exit
+
+int fa2/0
+ip add 192.168.6.2 255.255.255.252
+no shut
+
+
+
+router F>>
+==========
+
+en
+conf t 
+int fa0/0
+ip add 192.168.3.2 255.255.255.252
+no shut
+exit
+
+int fa1/0
+ip add 192.168.4.1 255.255.255.252
+no shut
+exit
+
+int fa2/0
+ip add 192.168.7.1 255.255.255.252
+no shut
+exit
+
+router G>>
+==========
+
+en
+conf t 
+int fa0/0
+ip add 192.168.4.2 255.255.255.252
+no shut
+exit
+
+int fa1/0
+ip add 192.168.8.1 255.255.255.252
+no shut
+
+router H>>
+==========
+
+en
+conf t 
+int fa0/0
+ip add 192.168.8.2 255.255.255.252
+no shut
+exit
+
+int fa1/0
+ip add 192.168.20.1 255.255.255.248
+no shut
+
+
+
+ospf on R:A
+============
+router ospf 1
+network 192.168.1.0 0.0.0.3 area 0
+network 192.168.10.0 0.0.0.7 area 0
+
+Route B:
+=========
+router ospf 2
+network 192.168.1.0 0.0.0.3 area 0
+network 192.168.2.0 0.0.0.3 area 0
+
+Route C:
+=========
+router ospf 3
+network 192.168.3.0 0.0.0.3 area 0
+network 192.168.2.0 0.0.0.3 area 0
+network 192.168.5.0 0.0.0.3 area 0
+
+Route D:
+=========
+router ospf 4
+network 192.168.5.0 0.0.0.3 area 0
+network 192.168.6.0 0.0.0.3 area 0
+
+
+Route E:
+=========
+router ospf 5
+network 192.168.7.0 0.0.0.3 area 0
+network 192.168.6.0 0.0.0.3 area 0
+
+Route F:
+=========
+router ospf 6
+network 192.168.7.0 0.0.0.3 area 0
+network 192.168.3.0 0.0.0.3 area 0
+network 192.168.4.0 0.0.0.3 area 0
+
+Route G:
+=========
+router ospf 7
+network 192.168.8.0 0.0.0.3 area 0
+network 192.168.4.0 0.0.0.3 area 0
+
+
+Route H:
+=========
+router ospf 8
+network 192.168.8.0 0.0.0.3 area 0
+network 192.168.20.0 0.0.0.7 area 0
+
