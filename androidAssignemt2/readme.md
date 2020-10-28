@@ -5,6 +5,7 @@ Click The link for direct nevigation
 ## create an [Empty Activity as About](https://github.com/yeasin50/AssetsFor_/blob/master/androidAssignemt2/createActivity.png)
 ![Follow Next](https://github.com/yeasin50/AssetsFor_/blob/master/androidAssignemt2/createActivity.png)
 #### Change the Package name of
+Press Alt+Enter for AutoCorrection![changeName](https://github.com/yeasin50/AssetsFor_/blob/master/androidAssignemt2/thisWayChangePackageName.png)
 - [MainAcitivity.java](https://github.com/yeasin50/AssetsFor_/blob/c7f21c462f82cd3d7cd1c54b789461a6be8deac5/androidAssignemt2/MainActivity.java#L1)
 - [About.java](https://github.com/yeasin50/AssetsFor_/blob/c7f21c462f82cd3d7cd1c54b789461a6be8deac5/androidAssignemt2/About.java#L1)
 
