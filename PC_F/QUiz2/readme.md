@@ -6,7 +6,7 @@
  
 setContentView is use to connect xml file with java file. setContentView also call from onCreate method. This is the property of MainAcitivity that extends from AppCompatActivity.
 </br>example: 
-as default we have activity_main.xml file. In our MainActivity.java we call setContentView(R.layout.activity_main) inside Oncreate. As a result we can manupulate xml file properties through our MainAcitivity.java file.   
+as default we have activity_main.xml file. In our MainActivity.java we call setContentView(R.layout.activity_main) inside Oncreate state. As a result we can manupulate xml file properties through our MainAcitivity.java file.   
 
 This is how it works:
 ~~~
