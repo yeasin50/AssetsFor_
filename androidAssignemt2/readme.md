@@ -16,3 +16,4 @@ Press Alt+Enter for AutoCorrection
 
 
 Build and Run ++modify :)
+You may also looking for more, see [realTime Calculator](https://github.com/yeasin50/Android_Project_Helper/tree/master/realTimeCalculator)
