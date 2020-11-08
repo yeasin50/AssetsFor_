@@ -4,7 +4,14 @@ XML file for B
 all => https://docs.google.com/document/d/1hC_hm8tpnim44_WPMOQfFjQrkFEcFYxW2trtU5bZlC4/edit?usp=sharing
 
 Ans. 1
+
 As default linear layout uses horizontal rotation. In our UI every widget takes match parent width. So in such a case, we are able to see only the 1st widget of our xml. To handle such an error we just have to use orientation as verticale in mainLayout. 
+In a java file, there could also be an error while trying to press factButton without feeding proper input. 
+Linear layout orientation error
+Calculation error on null 
+Calculation error with string data type
+ 
+
  ~~~
 xml: 
 <?xml version="1.0" encoding="utf-8"?>
