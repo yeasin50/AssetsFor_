@@ -30,7 +30,7 @@ public class NextActivity extends AppCompatActivity {
         processsBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             int toastText = count%id.charAt(id.length()-1);
+              int toastText = count%(Integer.parseInt(String.valueOf(id.charAt(id.length()-1))));
                 Log.i(TAG, "onClick: " +id.charAt(id.length()-1));
                 Toast.makeText(getApplicationContext(), name+","+id+","+ toastText,Toast.LENGTH_LONG).show();
 
