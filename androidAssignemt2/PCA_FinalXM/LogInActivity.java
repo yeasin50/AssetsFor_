@@ -17,8 +17,6 @@ public class LogInActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.login_activity);
-//direct to next
-        startActivity(new Intent(getApplicationContext(), NextAcitivity.class));
 
         editTextID= findViewById(R.id.ediTextStdID);
         editTextPass = findViewById(R.id.ediTextStdpPss);
