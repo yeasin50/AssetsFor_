@@ -64,15 +64,12 @@ public class NextAcitivity extends AppCompatActivity {
         dbHelper = new MyDBHelper(this);
         SQLiteDatabase sqlDataException = dbHelper.getWritableDatabase();
 
-//        id = getIntent().getStringExtra("id");
+        id = getIntent().getStringExtra("id");
         btnBMI = findViewById(R.id.btnBMI);
         btnCtoF= findViewById(R.id.btnCtoF);
         btnFtoC = findViewById(R.id.btnFtoC);
          manager = getSupportFragmentManager();
-//        fragment = new CalculateBMI();
-//        FragmentTransaction transaction = manager.beginTransaction();
-//        transaction.replace(R.id.fragmentContainer, fragment).commit();
-//
+
         btnBMI.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
