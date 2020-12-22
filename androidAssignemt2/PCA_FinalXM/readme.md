@@ -1,4 +1,4 @@
-ignore readmE file 
+ignore README.md file
 ## PC -A Final AS Final
 
 Ques2: XMl of Activities 
@@ -15,6 +15,8 @@ Ques3: Java class of activity
   - LogInActivity.java
   
   Java of fragments
-  -start with fragment
+  - CalculateBMI.java
+  - Celsius_to_Fahrenheit.java
+  - Fahrenheit_to_Celsius.java
 
-  MyDBHelper use to handle data 
+  MyDBHelper use to handle data Store and View 
