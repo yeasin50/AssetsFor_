@@ -1,7 +1,8 @@
 # E-Class Notes
 ## Indian Institute of Remote Sensing (IIRS)
 -----
-[@isro_eclass](http://t.me/isro_eclass) Do join in this [telegram group](http://t.me/isro_eclass), if anyone intereted. We together will share and learn the things. 
+[@isro_eclass](http://t.me/isro_eclass) Do join in this [telegram group](http://t.me/isro_eclass), if anyone intereted. We together will share and learn the things.   
+[here whatsApp Group](https://chat.whatsapp.com/BfujN3stmg0LtciWtwvRI9)
 
 Note: I'm from January batch 2021. This is all i can give you. You can find current batch members on group. feel free to ask.   
 More about me [linkedIn](https://www.linkedin.com/in/mdyeasinsheikh/)
