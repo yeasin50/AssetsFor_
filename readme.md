@@ -2,4 +2,6 @@
  
  
  ### Todo
- [ ]: fix readme
+
+ - [ ]  fix readme file linking
+ - [ ]  create a index for navigation
