@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:layout_margin="8dp"
+    android:padding="4dp"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NextAcitivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_margin="8dp"
+        android:layout_height="wrap_content">
+        <Button
+            android:textAllCaps="false"
+            android:layout_margin="4dp"
+            android:id="@+id/btnBMI"
+            android:text=" BMI"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:textAllCaps="false"
+            android:layout_margin="4dp"
+            android:id="@+id/btnFtoC"
+            android:text="Fto C"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:textAllCaps="false"
+            android:layout_margin="4dp"
+            android:id="@+id/btnCtoF"
+            android:text="Cto F"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <fragment
+        android:name="com.example.loginactivity.fragment.CalculateBMI"
+        android:id="@+id/fragmentContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+</LinearLayout>
