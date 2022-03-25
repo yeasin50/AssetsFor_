@@ -9,7 +9,7 @@
 | Sl. No | Experiment Name                                 |       ref |
 | ------ | :---------------------------------------------- | --------: |
 | 01     | Lexical analyzer to recognize the tokens        | [file][1] |
-| 02     | recognize strings under `a`, `a\*b+`, `abb`     |         x |
+| 02     | recognize strings under `a`, `a\*b+`, `abb`     | [file][2] |
 | 03     | identify whether a given line is a comment      |         x |
 | 04     | recognize `/` in inside the program             |         x |
 | 05     | recognize strings under `a*`, `a*b+`, `abb`     |         x |
@@ -21,3 +21,4 @@
 | 11     | construct of DAG (`Directed Acyclic Graph`)     |         x |
 
 [1]: lexical_analyzer_to_reconize_token.dart
+[2]: string_roconization.dart
