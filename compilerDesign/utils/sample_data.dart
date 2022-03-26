@@ -9,5 +9,6 @@ final sample_data = [
   "/* multiLine commonet */",
   "/* not multi-line",
   "/** this will be multiline */",
-  "/* comment multi-line ***/"
+  "/* comment multi-line ***/",
+  "check  a (slash) / in sentence"
 ];
