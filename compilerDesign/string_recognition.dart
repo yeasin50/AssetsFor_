@@ -22,7 +22,7 @@ List<String?> checkPattern(String data, String pattern) {
   Iterable<Match> matches = exp.allMatches(data);
 
   matches.forEach((element) {
-    stdout.writeln("$pattern found: on $data");
+    stdout.writeln("pattern: $pattern found on: $data");
   });
 
   return matches.map((e) => e.group(0)).toList();
@@ -31,13 +31,17 @@ List<String?> checkPattern(String data, String pattern) {
 void main(List<String> args) {
   sample_data.forEach((data) {
     //* task 2
-    fixedWordChecker(data: data, reconizer: "a");
-    fixedWordChecker(data: data, reconizer: "abb");
-    checkPattern(data, r"a*b+");
+    // fixedWordChecker(data: data, reconizer: "a");
+    // fixedWordChecker(data: data, reconizer: "abb");
+    // checkPattern(data, r"a*b+");
 
     //* for lab3  'a*', 'a*b+', 'abb'.
-    checkPattern(data, r'a.*');
-    checkPattern(data, r'a.*b+');
-    checkPattern(data, r'aab');
+    // checkPattern(data, r'a.*');
+    // checkPattern(data, r'a.*b+');
+    // checkPattern(data, r'aab');
+
+    //* practice of lab3: recognize any type of strings
+    ///dart string format => " " , ' ',not checking multiline
+    checkPattern(data, r'''[",'].*[",']''');
   });
 }

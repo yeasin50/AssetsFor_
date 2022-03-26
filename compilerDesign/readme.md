@@ -13,7 +13,7 @@
 | 03     | identify whether a given line is a comment      | [file][3] |
 | 04     | recognize `/` in inside the program             | [file][4] |
 | 05     | recognize strings under `a*`, `a*b+`, `abb`     | [file][5] |
-| 06     | recognize any type of strings                   |         x |
+| 06     | recognize any type of strings                   | [file][6] |
 | 07     | lexical analyzer to recognize a few patterns    |         x |
 | 08     | test whether a given identifier is valid or not |         x |
 | 09     | program for constructing of LL (1)              |         x |
@@ -25,3 +25,4 @@
 [3]: comment_checker.dart
 [4]: reconize_slash.dart
 [5]: string_recognition.dart#L38-L40
+[6]: string_recognition.dart#L45

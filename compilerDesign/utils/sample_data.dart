@@ -10,5 +10,7 @@ final sample_data = [
   "/* not multi-line",
   "/** this will be multiline */",
   "/* comment multi-line ***/",
-  "check  a (slash) / in sentence"
+  "check  a (slash) / in sentence",
+  "'this will be reconize as String'",
+  '"String here"'
 ];
