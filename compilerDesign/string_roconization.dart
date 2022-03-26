@@ -1,5 +1,7 @@
 import 'dart:io';
 
+import 'utils/utils.dart';
+
 /// fixed word checkUP
 void fixedWordChecker({
   required String data,
@@ -22,9 +24,6 @@ void checkPattern(String data) {
 }
 
 void main(List<String> args) {
-  ///sample data
-  final sample_data = ["this", "is", "a", "amigo", "abb", "hoia"];
-
   sample_data.forEach((data) {
     fixedWordChecker(data: data, reconizer: "a");
     fixedWordChecker(data: data, reconizer: "abb");
