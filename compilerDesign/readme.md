@@ -21,7 +21,7 @@
 | 11     | construct of DAG (`Directed Acyclic Graph`)     |         x |
 
 [1]: lexical_analyzer_to_reconize_token.dart
-[2]: string_recognition.dart.dart
+[2]: string_recognition.dart
 [3]: comment_checker.dart
 [4]: reconize_slash.dart
 [5]: string_recognition.dart#L38-L40
