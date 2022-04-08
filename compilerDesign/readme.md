@@ -20,9 +20,13 @@
 | 10     | implement Shift-Reduce Parser.                  |         x |
 | 11     | construct of DAG (`Directed Acyclic Graph`)     |         x |
 
+
+#### report 1-5 [doc][doc]
+
 [1]: lexical_analyzer_to_reconize_token.dart
 [2]: string_recognition.dart
 [3]: comment_checker.dart
 [4]: reconize_slash.dart
 [5]: string_recognition.dart#L38-L40
 [6]: string_recognition.dart#L45
+[doc]: https://docs.google.com/document/d/19dCfrPk6nCx3HIZxoN7Jt4gvx2VxcBGqKAvy9t5GKaA/edit?usp=sharing
