@@ -1,0 +1,79 @@
+body {
+    background-color: lightblue;
+}
+
+h1 {
+    color: crimson;
+
+}
+
+p {
+    border: dotted;
+    border-color: black;
+    border-width: 2px;
+    font-weight: bold;
+    padding: 20px;
+    margin: auto;
+    /* margin: 25px 10px 20px 10px; */
+
+}
+
+h3 {
+    margin: 33px;
+    text-align: center;
+    background-color: red;
+    padding: 30px;
+}
+
+
+th{
+    background-color: blue;
+}
+
+td, th{
+    border: 2px solid rebeccapurple;
+    padding: 20px;
+}
+table { 
+    width: 100%;
+    /* padding: 20px;  */
+    border: 2px solid rebeccapurple;
+    
+    text-align: center;
+}
+
+
+a:visited{
+ color: green;
+}
+
+a:hover{
+    color: brown;
+}
+
+button{
+ 
+    padding: 12px;
+}
+
+button:hover{
+   background-color: blue;
+}
+
+.sbtn{
+  
+    background-color: blue;
+}
+
+.sbtn:hover{
+  
+    background-color: yellow;
+}
+
+/* fixME fix list  itemk height */
+ul{
+ 
+  list-style: url("https://savoredsips.com/wp-content/uploads/2018/03/cappuccino-featured.jpg?height=20px");  
+  height: 25px;
+  width: 35px;
+}
