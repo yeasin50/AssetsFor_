@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+</head>
+
+<body>
+
+    <h1 style="text-align: center;"> Student Registration Form</h1>
+
+    <hr>
+
+    <form action="index.html">
+
+        <label for="fName"> First name</label><br>
+        <input type="text" id="fname" name="fName"><br>
+        <label for="mName"> Middle name</label><br>
+        <input type="text" id="mName" name="mName"><br>
+
+        <label for="lName"> Last name</label><br>
+        <input type="text" id="lname" name="lName"><br>
+
+        <label for="pass"> Last name</label><br>
+        <input type="password" id="pass" name="password"><br>
+
+
+
+        <br>
+
+        <!-- dropDown -->
+        <label for="course"> Course</label>
+        <select name="course" id="course">
+
+            <option value="cse417">CSE417</option>
+            <option value="cse418" selected>CSE418</option>
+            <option value="cse498">CSE498</option>
+        </select>
+
+
+        <br>
+        <br>
+
+
+        <p>Gender</p>
+
+        <input type="radio" id="male" name="gender_S" value="Male">
+        <label for="gender"> Male</label>
+
+        <input type="radio" id="female" name="gender_S" value="Male">
+        <label for="gender"> Female</label>
+
+        <input type="radio" id="othersGen" name="gender_S" value="Male">
+        <label for="gender"> Others</label>
+
+        <br>
+        <input type="submit">
+
+    </form>
+</body>
+
+</html>
