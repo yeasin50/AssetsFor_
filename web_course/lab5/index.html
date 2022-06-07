@@ -9,7 +9,12 @@
 
 
     <style>
-
+        table,
+        th,
+        td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
     </style>
 </head>
 
@@ -56,6 +61,51 @@
         <dt>Milk</dt>
         <dd>- white cold drink</dd>
     </dl>
+
+
+    <table style="width:100%">
+        <tr>
+            <th style="width:70%">Firstname</th>
+            <th>Lastname</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Jill</td>
+            <td>Smith</td>
+            <td>50</td>
+        </tr>
+        <tr>
+            <td>Eve</td>
+            <td>Jackson</td>
+            <td>94</td>
+        </tr>
+    </table>
+
+
+    <hr>
+
+    <h1> test the spans</h1>
+    <table width="100%" style="border: 3px solid pink; border-collapse :collapse">
+
+        <tr style="border: 4px solid green;">
+            <th rowspan="2"></th>
+            <th>Sat</th>
+            <th>Sun</th>
+        </tr>
+        <tr>
+            <td>S</td>
+            <td>A</td>
+        </tr>
+        <tr>
+
+            <td colspan="2">Ulala </td>
+            <td>A</td>
+        </tr>
+    </table>
+
+    <br>
+    <hr>
+
 
     <iframe width="360" height="315" src="https://www.youtube.com/embed/I7wc7zuVMlo" title="YouTube video player"
         frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
