@@ -1,9 +1,9 @@
-ul {
+.navbar ul {
   position: relative;
   transform: skewY(-10deg);
 }
 
-ul li {
+.navbar ul li {
   position: relative;
   list-style: none;
   width: 200px;
@@ -13,12 +13,12 @@ ul li {
   transition: 0.5s;
 }
 
-ul li:hover {
+.navbar ul li:hover {
   background: #33a3ee;
   transform: translateX(40px);
 }
 
-ul li a {
+.navbar ul li a {
   text-decoration: none;
   color: white;
   display: block;
@@ -27,7 +27,7 @@ ul li a {
   transition: 0.5s;
 }
 
-ul li::before {
+.navbar ul li::before {
   content: "";
   position: absolute;
   width: 40px;
@@ -40,11 +40,11 @@ ul li::before {
   transition: 0.5s;
 }
 
-ul li:hover::before {
+.navbar ul li:hover::before {
   background: #33a3ee;
 }
 
-ul li::after {
+.navbar ul li::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -57,10 +57,10 @@ ul li::after {
   transition: 0.5s;
 }
 
-ul li:hover::after {
+.navbar ul li:hover::after {
   background: #33a3ee;
 }
 
-ul li:last-child::after {
+.navbar ul li:last-child::after {
   box-shadow: -130px 70px 20px rgba(0, 0, 0, 0.123);
 }
