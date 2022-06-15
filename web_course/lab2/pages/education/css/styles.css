@@ -1,0 +1,16 @@
+* {
+    padding: 0;
+    margin: 0;
+  }
+  
+  body {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .nav-wrapper {
+    position: absolute;
+    margin-top: 40px;
+    padding-left: 40px;
+  }
+  
