@@ -8,13 +8,13 @@ body {
   height: 100%;
 }
 
-
-.nav-wrapper{
-  position: relative;
+.nav-wrapper {
+  position: absolute;
+  margin-top: 40px;
+  padding-left: 40px;
 }
 
 .profile-image {
-  position: relative;
   margin: 2%;
   width: 100%;
   text-align: center;
