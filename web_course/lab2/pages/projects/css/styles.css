@@ -1,0 +1,111 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* :root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+  } */
+
+body {
+  width: 100%;
+  height: 100%;
+}
+
+.nav-wrapper {
+  position: absolute;
+  margin-top: 60px;
+  padding-left: 40px;
+}
+
+/* start pageCSS */
+
+.title-h {
+  background-color: rgba(159, 37, 120, 0.718);
+  height: 200px;
+  text-align: center;
+  padding-top: 70px;
+  font-size: larger;
+  text-shadow: 2px 2px #58e6f09b;
+}
+
+.brief {
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 20px;
+  background-color: bisque;
+}
+
+.experience {
+  background-color: rgba(128, 128, 128, 0.05);
+  text-align: center;
+  padding-bottom: 45px;
+}
+
+.experience h2 {
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.experience ul {
+  padding-top: 8px;
+  display: table;
+  margin: 0 auto;
+  text-align: left;
+  list-style: none;
+}
+
+.experience ul li {
+  padding: 4px;
+}
+
+.qualification {
+  background-color: rgba(128, 128, 128, 0.05);
+  text-align: left;
+  padding-bottom: 45px;
+}
+
+.qualification h2 {
+  text-align: center;
+  padding-top: 20px;
+  color: darkcyan;
+}
+
+.qualification ul {
+  padding-top: 8px;
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+}
+
+.qualification ul li {
+  padding: 4px;
+}
+
+.licenses {
+  text-align: center;
+  background-color: darkcyan;
+}
+
+.licenses h2 {
+  text-align: center;
+  padding-top: 20px;
+  color: wheat;
+}
+
+.licenses ul {
+  padding-top: 8px;
+  display: table;
+  margin: 0 auto;
+  text-align: center;
+  list-style: none;
+  color: white;
+}
+
+.licenses ul li {
+  padding: 4px;
+}
