@@ -16,13 +16,16 @@ body {
 
 .header-text {
   text-align: center;
-  margin-top: 70px;
+  margin: 2%;
+  margin-top: 40px;
   margin-bottom: 70px;
 }
 
 .header-text h1 {
   text-align: center;
   color: purple;
+  margin-bottom: 20px;
+  text-shadow: 20px solid purple ;
 }
 
 .header-text h4 {
@@ -61,7 +64,7 @@ body {
   transition: 0.5s;
 }
 
-.contact-info ul li p {
+.contact-info ul li span {
   font-weight: bold;
   color: purple;
   line-break: strict;
@@ -71,4 +74,12 @@ body {
   text-decoration: none;
   font-weight: normal;
   color: darkcyan;
+}
+
+.contact-info h3 {
+  margin-top: 60px;
+  text-align: center;
+  font-style: italic;
+
+  color: rgb(0, 151, 156);
 }
