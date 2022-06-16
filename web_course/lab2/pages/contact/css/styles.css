@@ -41,13 +41,34 @@ body {
   color: cadetblue;
 }
 
-.contact-info {
-
+.contact-info ul {
+  display: table;
+  margin: 0 auto;
+  list-style: none;
 }
 
-.contact-info li{
-  padding: 10px;
-  margin: 2px;
-  background-color: aqua;
+.contact-info li {
+  text-align: left;
+  padding: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  z-index: var(--i);
   width: 250px;
+}
+
+.contact-info ul li:hover {
+  background: #33a3ee;
+  transition: 0.5s;
+}
+
+.contact-info ul li p {
+  font-weight: bold;
+  color: purple;
+  line-break: strict;
+}
+
+.contact-info ul li a {
+  text-decoration: none;
+  font-weight: normal;
+  color: darkcyan;
 }
