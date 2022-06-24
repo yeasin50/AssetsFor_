@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+
+    <link rel="stylesheet" href="./styles.css" />
+</head>
+
+<body>
+
+
+
+
+
+    <form id="form" action="index.html">
+        <h1> Student Registration Form</h1>
+        <hr>
+
+        <div class="name-section">
+            <label for="fName"> First name</label><br>
+            <input type="text" id="fname" name="fName" placeholder="First name"><br>
+            <label for="mName"> Middle name</label><br>
+            <input type="text" id="mName" name="mName" placeholder="Middle name"><br>
+
+            <label for="lName"> Last name</label><br>
+            <input type="text" id="lname" name="lName" placeholder="Last Name"><br>
+        </div>
+
+
+        <br>
+
+        <!-- dropDown -->
+        <label for="course"> Course</label>
+        <select name="course" id="course">
+            <option value="cse417">CSE417</option>
+            <option value="cse418" selected>CSE418</option>
+            <option value="cse498">CSE498</option>
+        </select>
+
+
+        <br>
+        <br>
+
+
+        <div class="gender-section">
+            <p>Gender</p>
+
+            <input type="radio" id="male" name="gender_S" value="Male">
+            <label for="gender"> Male</label>
+
+            <input type="radio" id="female" name="gender_S" value="Male">
+            <label for="gender"> Female</label>
+
+            <input type="radio" id="othersGen" name="gender_S" value="Male">
+            <label for="gender"> Others</label>
+        </div>
+
+        <br>
+
+        <label for="countryCode">Phone</label><br>
+        <input type="text" id="countryCode" name="countryCode" placeholder="+91"><br>
+        <label for="phoneNumber"> </label><br>
+        <input type="text" id="phoneNumber" name="phoneNumber" placeholder="Phone no."><br>
+
+        <br>
+        <label for="cAdress">Current Address :</label><br>
+        <textarea id="w3review" name="w3review" placeholder="Current address" style="resize:vertical" rows="4">
+
+        </textarea>
+
+        <br>
+
+        <div class="contact-section">
+
+            <label for="email">Email </label><br>
+            <input type="email" id="email" name="email" placeholder="Email"><br>
+
+            <label for="Password">Password </label><br>
+            <input type="password" id="Password" name="Password" placeholder="password"><br>
+
+            <label for="RePassword">Re-Typed Password </label><br>
+            <input type="password" id="RePassword" name="RePassword" placeholder="Retype the password"><br>
+
+        </div>
+
+
+        <input type="submit">
+
+    </form>
+</body>
+
+</html>

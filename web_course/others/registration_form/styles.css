@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #b2edff;
+  width: 100%;
+}
+
+body h1 {
+  text-align: center;
+}
+
+hr {
+  height: 2px;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-bottom: 24px;
+  background-color: white;
+  color: white;
+}
+
+#form {
+  padding: 12px;
+  max-width: 550px;
+  margin: auto;
+}
+
+#form input[type="text"],
+input[type="password"],
+input[type="email"],
+textarea {
+  margin-bottom: 8px;
+  margin-top: 4px;
+  border: none;
+  width: 100%;
+  padding: 8px;
+}
+
+#form input[type="submit"] {
+  width: 100%;
+  height: 46px;
+  background-color: rgb(12, 192, 12);
+  color: white;
+  font-size: 23px;
+  border: none;
+  border-radius: 2%;
+  margin-top: 48px;
+}
+
+.gender-section {
+  width: max-content;
+}
