@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="time"></div>
+    <div id="time2"></div>
+
+
+    <script>
+        myTimer(); //init for first time
+        setInterval(myTimer, 1000);
+
+        function myTimer() {
+            var d = new Date();
+            document.getElementById("time").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+
+    <!-- hard one  -->
+    <script>
+        function checkTime(i) {
+            if (i < 10)
+                i = "0" + i;
+
+            return i;
+        }
+
+        function startTime() {
+            var today = new Date();
+            var h = today.getHours();
+            var m = today.getMinutes();
+            var s = today.getSeconds();
+            var day = today.getDay();
+            var month = today.getMonth();
+            var year = today.getFullYear();
+
+            // add a zero in front of numbers<10
+            m = checkTime(m);
+            s = checkTime(s);
+
+            document.getElementById('time2').innerHTML = h + ":" + m + ":" + s;
+            t = setTimeout(function () {
+                startTime()
+            }, 500);
+        }
+        startTime();
+    </script>
+
+
+
+</body>
+
+</html>
