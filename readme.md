@@ -1,6 +1,6 @@
 > This repository is created to share temporary resource  
  
-CSE routine [v3.3](https://yeasin50.github.io/routine_helper/#/)
+[Find your class routine(CSE):test](https://yeasin50.github.io/routine_helper/#/)
 
 ## Wireless Progamming Lab/Exam
 
