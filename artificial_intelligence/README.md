@@ -1,0 +1,1 @@
+[Lab 3](lab3_file_rw.py) file path is root is `artificial_intelligence`
