@@ -1,6 +1,7 @@
 import 'dart:io';
 import 'dart:math' as math;
 
+/// Circle
 void area(double radius) {
   final result = math.pi * math.pow(radius, 2);
 
@@ -22,7 +23,7 @@ void powerTask(int start, int end) {
 
 int readInput() => int.tryParse(stdin.readLineSync() ?? "") ?? 0;
 
-void edgeBase(int a, int c) {
+void getAdjacent(int a, int c) {
   final x = math.sqrt(math.pow(a, 2) - math.pow(c, 2));
   print("base $x");
 }
@@ -32,5 +33,5 @@ void main(List<String> args) {
   int a = readInput();
   stdout.write("Enter c: ");
   int c = readInput();
-  edgeBase(a, c);
+  getAdjacent(a, c);
 }
