@@ -12,7 +12,7 @@ _compare() {
   }
 }
 
-calGradeFromMark(int mark) {
+void calGradeFromMark(int mark) {
   if (mark >= 80) {
     print("Got A+");
   } else if (mark >= 75) {
@@ -60,12 +60,10 @@ getNInput(int numberOfInput) {
   for (int i = 0; i < numberOfInput; i++) {
     result.add(input());
   }
-  int sum = result.reduce((value, element) => value+element);
-  print(" sum $sum  average:${sum/numberOfInput}");
-
+  int sum = result.reduce((value, element) => value + element);
+  print(" sum $sum  average:${sum / numberOfInput}");
 }
 
-// submit link=> mahadicseju@gmail.com
 void main(List<String> args) {
-  getNInput(10);
+  getNInput(input());
 }
