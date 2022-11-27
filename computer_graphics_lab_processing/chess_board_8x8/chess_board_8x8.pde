@@ -7,7 +7,7 @@ public void settings() {
 
 void drawBloc(float i, float j){
     float blockSize = frameSize/ numberOfBlocs;
-    color blocColor = (i%2==0 && j%2==0) || (i%2==1 && j%2==1)? color(255,255,255) : color(0,0,0);
+    color blocColor = i%2 == j%2? color(255,255,255) : color(0,0,0);
     fill(blocColor);
     rect(i*blockSize,j*blockSize,  blockSize, blockSize);
 
