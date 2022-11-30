@@ -78,9 +78,10 @@ void drawBody(float originX, float originY) {
        );
     
     
+    float shiftForSeat = 30;
     //horiz / middle
-    quad(originX - tfW / 2 + tfW, originY ,  //p1
-        originX - tfW / 2 + tfW + thickness, originY ,  //p2
+    quad(originX - tfW / 2 + tfW+shiftForSeat/2, originY -shiftForSeat,  //p1
+        originX - tfW / 2 + tfW + thickness+ shiftForSeat/2, originY -shiftForSeat,  //p2
         
         originX  + 10 , originY + tfW - thickness / 2,//p4 
         originX , originY + tfW - thickness / 2//p3
@@ -167,6 +168,6 @@ void draw() {
 
    float  _width  = 50;
    float _height  = 15;
-   drawSeat(centerX+_width*1.25 , centerY-_width, _width, _height);
+   drawSeat(centerX+_width*1.25 , centerY-_width*.6, _width, _height);
     
 }
