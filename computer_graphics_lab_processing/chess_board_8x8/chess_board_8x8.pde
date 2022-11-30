@@ -18,5 +18,6 @@ void draw() {
         for (int j = 0; j < numberOfBlocs; j++) {
             drawBloc(i,j);
         }
+    }
 }
-}
+        
