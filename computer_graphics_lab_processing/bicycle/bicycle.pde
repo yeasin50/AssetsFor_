@@ -56,7 +56,7 @@ void drawBody(float originX, float originY) {
     fill(mainBodyColor);
     
     //top 
-    float  tfW = frameWidth  * .25;
+    float  tfW = frameWidth  *.25;
     rect(originX - tfW / 2, originY , tfW, thickness);// we can sit here
     rect(originX , originY + tfW - thickness / 2 , tfW + 10 , thickness); // bottom can place legs
     
@@ -80,16 +80,16 @@ void drawBody(float originX, float originY) {
     
     float shiftForSeat = 30;
     //horiz / middle
-    quad(originX - tfW / 2 + tfW+shiftForSeat/2, originY -shiftForSeat,  //p1
-        originX - tfW / 2 + tfW + thickness+ shiftForSeat/2, originY -shiftForSeat,  //p2
+    quad(originX - tfW / 2 + tfW + shiftForSeat / 2, originY - shiftForSeat,  //p1
+        originX - tfW / 2 + tfW + thickness + shiftForSeat / 2, originY - shiftForSeat,  //p2
         
         originX  + 10 , originY + tfW - thickness / 2,//p4 
         originX , originY + tfW - thickness / 2//p3
        ); 
     
-    /// left most /
-    quad(originX - tfW / 2, originY , //p1
-        originX - tfW / 2 + thickness, originY, //p2
+    /// left most / ; 10px handle
+    quad(originX - tfW / 2 + 15, originY - 30 , //p1
+        originX - tfW / 2 + thickness + 15, originY - 30, //p2
         
         originX  + 10 - tfW , originY + tfW - thickness / 2,//p4 
         originX - tfW, originY + tfW - thickness / 2//p3
@@ -97,19 +97,19 @@ void drawBody(float originX, float originY) {
     
     fill(paddleColor);
     stroke(color(255, 225, 93));
-    float paddleExtent = tfW * .35;
+    float paddleExtent = tfW *.35;
     //paddle frame
     circle(originX + thickness / 2, originY + tfW,paddleExtent);
     
     fill(backGroundColor);
     stroke(color(255, 225, 93));
     //paddle for BG
-    circle(originX + thickness / 2, originY + tfW, paddleExtent * .8);
+    circle(originX + thickness / 2, originY + tfW, paddleExtent *.8);
     
     fill(mainBodyColor);
     stroke(mainBodyColor);
     //paddle C 
-    circle(originX + thickness / 2, originY + tfW,paddleExtent * .5);
+    circle(originX + thickness / 2, originY + tfW,paddleExtent *.5);
     
     /// main paddle
     paddleDraw(originX + thickness / 2, originY + tfW);
@@ -131,31 +131,48 @@ void paddleDraw(float cx, float cy) {
     vertex(cx - g , cy + h);//p8
     
     vertex(cx - g, cy);//p1
-    endShape();
-    
-    
+    endShape();  
 }
 
 
 color seatColor = color(123,44,123);
 
-void drawSeat(float cx,float cy, float _width, float _height){
-
- stroke(seatColor, 100);
- fill(seatColor);
- float curve=  _height * .25;
-  beginShape();
-  vertex(cx, cy ); //p1
-  vertex(cx+ _width-curve, cy); //p2
-  vertex(cx+ _width, cy+curve); //p3
-  vertex(cx+ _width, cy+_height - curve*2); //p4
-  vertex(cx+ _width-curve, cy+_height); //p5
-  vertex(cx + _width- curve, cy+_height); //p6 
-  vertex(cx, cy+_height -curve); //p7 
-  vertex(cx, cy);
-  endShape();
-
+void drawSeat(float cx,float cy, float _width, float _height) {
+    stroke(seatColor, 100);
+    fill(seatColor);
+    float curve =  _height *.25;
+    beginShape();
+    vertex(cx, cy); //p1
+    vertex(cx + _width - curve, cy); //p2
+    vertex(cx + _width, cy + curve); //p3
+    vertex(cx + _width, cy + _height - curve * 2); //p4
+    vertex(cx + _width - curve, cy + _height); //p5
+    vertex(cx + _width - curve, cy + _height); //p6 
+    vertex(cx, cy + _height - curve); //p7 
+    vertex(cx, cy);
+    endShape();
+    
 }
+
+void drawHandler(float cx, float cy) {
+    color  handleColor = color(63, 0, 113);
+    stroke(handleColor);
+    fill(handleColor);
+    float _f  = 10;
+    beginShape();
+    vertex(cx, cy); //p1 left hand end
+    vertex(cx, cy + _f);//p2
+    vertex(cx - _f * 3.35, cy + _f);//p3 middle
+    vertex(cx - _f * 3.35, cy + _f * 2);//p4 middle
+    vertex(cx, cy + _f * 2);//p5
+    vertex(cx, cy + _f * 3);//p6
+    vertex(cx - _f * 4, cy + _f * 3);//p7 
+    vertex(cx - _f * 4, cy);//p8 
+    vertex(cx, cy); //p1
+    endShape();    
+}    
+
+
 void draw() {
     float wheelExtent = getWheelExtent();
     drawWheel(wheelExtent * 1.5 , frameHeight);
@@ -165,9 +182,9 @@ void draw() {
     float centerY = frameHeight / 2 + padding;
     
     drawBody(centerX,centerY);
-
-   float  _width  = 50;
-   float _height  = 15;
-   drawSeat(centerX+_width*1.25 , centerY-_width*.6, _width, _height);
     
+    float  _width  = 50;
+    float _height  = 15;
+    drawSeat(centerX + _width * 1.25 , centerY - _width * .6, _width, _height);
+    drawHandler(centerX - 19, centerY - _width + 5);
 }
