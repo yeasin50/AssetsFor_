@@ -134,6 +134,27 @@ void paddleDraw(float cx, float cy) {
     
     
 }
+
+
+color seatColor = color(123,44,123);
+
+void drawSeat(float cx,float cy, float _width, float _height){
+
+ stroke(seatColor, 100);
+ fill(seatColor);
+ float curve=  _height * .25;
+  beginShape();
+  vertex(cx, cy ); //p1
+  vertex(cx+ _width-curve, cy); //p2
+  vertex(cx+ _width, cy+curve); //p3
+  vertex(cx+ _width, cy+_height - curve*2); //p4
+  vertex(cx+ _width-curve, cy+_height); //p5
+  vertex(cx + _width- curve, cy+_height); //p6 
+  vertex(cx, cy+_height -curve); //p7 
+  vertex(cx, cy);
+  endShape();
+
+}
 void draw() {
     float wheelExtent = getWheelExtent();
     drawWheel(wheelExtent * 1.5 , frameHeight);
@@ -143,5 +164,9 @@ void draw() {
     float centerY = frameHeight / 2 + padding;
     
     drawBody(centerX,centerY);
+
+   float  _width  = 50;
+   float _height  = 15;
+   drawSeat(centerX+_width*1.25 , centerY-_width, _width, _height);
     
 }
