@@ -184,3 +184,158 @@ We are using LinearLayout with vertical orientation. `android:layout_height="mat
 
 
 
+### G) 
+
+```java
+ArrayAdapter<String> adapter1 = new
+ArrayAdapter<String>(this,
+android.R.layout.simple_dropdown_item_1line,
+android.R.id.text1, values);
+```
+
+This snippet is creating a array adapter with the built-in `simple_dropdown_item_1line` for every item. and the `value` will be list of String.  This adapter can be used on snippet to feed the items of xml snippet widget.
+
+
+### i) Spinner ``XML``
+```xml
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <EditText
+        android:id="@+id/idEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#E91E63"
+        android:hint="Enter a number"
+        android:padding="20dp"
+        android:textAlignment="center" />
+
+
+    <Spinner
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/spinnerId"
+        />
+
+    <TextView
+        android:id="@+id/resultTextViewID"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:padding="24dp"
+        android:text="Converted result will be show here"
+        android:textAlignment="center" />
+</LinearLayout>
+```
+
+
+### Java
+```java
+package com.example.summer2020;
+
+import android.os.Bundle;
+import android.util.Log;
+import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.Spinner;
+import android.widget.TextView;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+
+public class MainActivity extends AppCompatActivity {
+    private static final String TAG = "MainActivity";
+
+    EditText editText;
+    TextView textView;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        editText = findViewById(R.id.idEditText);
+        textView = findViewById(R.id.resultTextViewID);
+
+        Spinner spinner = findViewById(R.id.spinnerId);
+
+        String[] array = {"Factorial value", "Root value", "Square Root value", "Square value"};
+
+        ArrayAdapter<String> adapter1 = new
+                ArrayAdapter<String>(this,
+                android.R.layout.simple_dropdown_item_1line,
+                android.R.id.text1, array);
+
+        spinner.setAdapter(adapter1);
+
+
+        spinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+                handleTapEvent(i);
+                Log.d(TAG, "onItemSelected: " + i);
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> adapterView) {
+
+            }
+        });
+    }
+
+
+    int getValue() {
+        try {
+            final String text = editText.getText().toString();
+            int value = Integer.parseInt(text);
+            return value;
+        } catch (Exception e) {
+            return 0;
+        }
+
+    }
+
+    void handleTapEvent(int index) {
+        switch (index) {
+            case 0:
+                long fact = 1;
+                for (int i = 1; i <= getValue(); ++i) {
+                    fact *= i;
+                }
+                textView.setText(String.format("%s", fact)); //4digit will be out of range
+                return;
+
+            case 1:
+                double value = Math.sqrt(getValue());
+                textView.setText(String.format("%s", value));
+                return;
+
+            case 2:
+                textView.setText(String.format("%s", Math.sqrt(getValue())));
+                return;
+
+            case 3:
+                textView.setText(String.format("%s", Math.pow(getValue(), 10)));
+                break;
+        }
+    }
+
+
+}
+```
+
+### )
+
+to change the app name we can go to `AndoridManifest.xml` and change the label property under application.
+
+`android:label="YourID"`
+
