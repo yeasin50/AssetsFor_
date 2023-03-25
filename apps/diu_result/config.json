@@ -1,5 +1,5 @@
 {
   "app_name": "diu_result",
-   "version":"0.2.1-pre",
-   "updates": ["error status", "student info", "mark-sheet improve","fixed cgpa","chart improve", "app-update","fcm" ]
+   "version":"1.0.0",
+   "updates": ["cgpa-playground", "student info", "mark-sheet improve","theme","chart improve", "share"]
 }
