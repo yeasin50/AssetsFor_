@@ -1,5 +1,6 @@
+## contol light with LDR sensor
 
-// contol light with LDR sensor
+```uno
 int LDR =A0; //  set analog input for LDR
 int LED = 2;
 
@@ -28,3 +29,5 @@ void loop()
   }
     
 }
+```
+![control_light_with_LDR](https://github.com/yeasin50/AssetsFor_/assets/46500228/d47da836-2e4f-42ff-bc6a-56d9df21a52a)
