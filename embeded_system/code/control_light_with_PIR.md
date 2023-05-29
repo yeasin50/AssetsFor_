@@ -2,6 +2,8 @@
 
 ## Control light with PIR
 
+[Tinker this](https://www.tinkercad.com/things/jNB3oPKtWiy)
+
 ```uno
 int PIR = 3; //  set digital input for PIR
 int LED = 2;
