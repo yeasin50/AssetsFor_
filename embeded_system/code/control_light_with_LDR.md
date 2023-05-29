@@ -1,5 +1,7 @@
 ## contol light with LDR sensor
 
+[Tinker this](https://www.tinkercad.com/things/0rxbqRuRQFK)
+
 ```uno
 int LDR =A0; //  set analog input for LDR
 int LED = 2;
