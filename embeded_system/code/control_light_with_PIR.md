@@ -8,7 +8,7 @@
 int PIR = 3; //  set digital input for PIR
 int LED = 2;
 
-int currentValue = 0; 
+int currentValue = 0;
 int pirPreviousState = LOW;
 
 void setup()
@@ -22,23 +22,26 @@ void loop()
 {
   currentValue = digitalRead(PIR);
 
-  if(currentValue==HIGH){
+  if (currentValue == HIGH) // value is HIGH when motion is detected
+  {
     digitalWrite(LED, HIGH);
-    if(pirPreviousState==LOW){
-       pirPreviousState = HIGH;
-       Serial.print("Motion Detected");
-       Serial.println(currentValue);
-  
-     }
-  else{
-    digitalWrite(LED, LOW);
-    if(pirPreviousState==HIGH){
+    if (pirPreviousState == LOW)
+    {
+      pirPreviousState = HIGH;
+      Serial.print("Motion Detected");
+      Serial.println(currentValue);
+    }
+    else
+    {
+      digitalWrite(LED, LOW);
+      if (pirPreviousState == HIGH)
+      {
         pirPreviousState = LOW;
         Serial.print("Motion Ended");
         Serial.println(currentValue);
+      }
     }
   }
-  } 
 }
 ```
 
