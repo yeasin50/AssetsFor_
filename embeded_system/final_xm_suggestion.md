@@ -64,3 +64,108 @@ for bits-per-second (we will refer to this as the baud rate).
 - `millis()`: return the number of milliseconds since the Arduino board begin running the current program.(u_Time on GSLS)
 - `delay(x)`: pause the program `x` milliseconds 
 - `delayMicroseconds(x)`: 
+
+-------
+
+ 
+- [Blink_LED](code/blink_left_right.md)
+
+### LED Dimmer
+You can check PWM
+
+> analogRead can be between 0-1023
+> analogWrite can be between 0-255
+
+PWM
+```
+int ledPin = 6;
+int analogPin = 0;
+int val = 0;
+
+void setup()
+{
+    pinMode(ledPin, OUTPUT);
+    Serial.begin(9600);
+}
+
+void loop()
+{
+    // analogRead can be between 0-1023
+    val = analogRead(analogPin);
+    Serial.println(val);
+    // analogWrite can be between 0-255
+    analogWrite(ledPin, val / 4);
+}
+
+```
+
+## Simulate a LED Dimmer
+```ino
+int brightness = 0;
+void setup()
+{
+    pinMode(9, OUTPUT);
+}
+void loop()
+{
+    for (brightness = 0; brightness <= 255;
+         brightness += 5)
+    {
+        analogWrite(9, brightness);
+        delay(30); // Wait for 30 millisecond(s)
+    }
+    for (brightness = 255; brightness >= 0;
+         brightness -= 5)
+    {
+        analogWrite(9, brightness);
+        delay(30); // Wait for 30 millisecond(s)
+    }
+}
+```
+
+## Storing data in EEPROM
+
+> An EEPROM is an Electrically Erasable
+Programmable Read-Only Memory. It is a form of non-volatile memory that can remember things with the power being turned off, or after resetting the Arduino. The beauty of this kind of memory is that we can store data generated within a sketch on a more permanent basis.
+> Anything that can be represented as bytes of data can be stored.
+>  the decimal value of the number to fall between zero and 255.
+
+[How to store on EROM 🤔](https://www.tutorialspoint.com/how-to-write-data-into-eeprom-with-arduino)
+
+ - include the header `#include <EEPROM.h>`
+ - To write `EEPROM.write(a,b);` The parameter a is the position in the EEPROM to store the integer (0~255) of data b. In this example, we have 1024 bytes of memory storage, so the value of a is between 0 and 1023.
+ - To retrieve a piece of data is equally as simple, use: `z = EEPROM.read(a);` Where z is an integer to store the data from the EEPROM position a.
+
+
+> This sketch will create random numbers between 0 and 255, store them in the EEPROM, then retrieve and display them on the serial monitor.
+
+```
+// Arduino internal EEPROM demonstration
+#include <EEPROM.h>
+int randomNumber;
+int EEsize = 1024; // size in bytes of your board's EEPROM
+void setup()
+{
+    Serial.begin(9600);
+    randomSeed(analogRead(0));
+}
+void loop()
+{
+    Serial.println("Writing random numbers...");
+    for (int i = 0; i < EEsize; i++)
+    {
+        randomNumber = random(255);
+        EEPROM.write(i, randomNumber);
+    }
+    Serial.println();
+    for (int a = 0; a < EEsize; a++)
+    {
+        randomNumber = EEPROM.read(a);
+        Serial.print("EEPROM position: ");
+        Serial.print(a);
+        Serial.print(" contains ");
+        Serial.println(randomNumber);
+        delay(25);
+    }
+}
+```
