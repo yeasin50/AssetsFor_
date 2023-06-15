@@ -47,6 +47,25 @@ for bits-per-second (we will refer to this as the baud rate).
 ![image](https://github.com/yeasin50/AssetsFor_/assets/46500228/c1882b7b-810f-4a71-b2d9-c740767daf2e)
 
 
+Simple form 
+
+```
+int PIR = 3; //  set digital input for PIR
+int LED = 2;
+
+void setup()
+{
+  pinMode(LED, OUTPUT);
+  pinMode(PIR, INPUT);
+}
+
+void loop()
+{
+  digitalWrite(LED, digitalRead(PIR));
+}
+```
+
+Extend level 
 ```ino
 int PIR = 3; //  set digital input for PIR
 int LED = 2;
