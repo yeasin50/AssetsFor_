@@ -74,15 +74,15 @@ void loop()
       Serial.print("Motion Detected");
       Serial.println(currentValue);
     }
-    else
+  }
+  else
+  {
+    digitalWrite(LED, LOW);
+    if (pirPreviousState == HIGH)
     {
-      digitalWrite(LED, LOW);
-      if (pirPreviousState == HIGH)
-      {
-        pirPreviousState = LOW;
-        Serial.print("Motion Ended");
-        Serial.println(currentValue);
-      }
+      pirPreviousState = LOW;
+      Serial.print("Motion Ended");
+      Serial.println(currentValue);
     }
   }
 }
