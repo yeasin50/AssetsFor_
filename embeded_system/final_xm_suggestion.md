@@ -37,7 +37,48 @@ for bits-per-second (we will refer to this as the baud rate).
 
 ![image](https://github.com/yeasin50/AssetsFor_/assets/46500228/4e40d411-858e-4c86-9e18-4c584e9aa09f)
 
+## [Control light with PIR](https://www.tinkercad.com/things/jNB3oPKtWiy)
 
+![image](https://github.com/yeasin50/AssetsFor_/assets/46500228/c1882b7b-810f-4a71-b2d9-c740767daf2e)
+
+
+```ino
+int PIR = 3; //  set digital input for PIR
+int LED = 2;
+
+int currentValue = 0; 
+int pirPreviousState = LOW;
+
+void setup()
+{
+  pinMode(LED, OUTPUT);
+  pinMode(PIR, INPUT);
+  Serial.begin(9600);
+}
+
+void loop()
+{
+  currentValue = digitalRead(PIR);
+
+  if(currentValue==HIGH){
+    digitalWrite(LED, HIGH);
+    if(pirPreviousState==LOW){
+       pirPreviousState = HIGH;
+       Serial.print("Motion Detected");
+       Serial.println(currentValue);
+  
+     }
+  else{
+    digitalWrite(LED, LOW);
+    if(pirPreviousState==HIGH){
+        pirPreviousState = LOW;
+        Serial.print("Motion Ended");
+        Serial.println(currentValue);
+    }
+  }
+  } 
+}
+```
 #  Understanding Codes: Functions
 
 - `min(x, y)`: return the smallest number between x and y
