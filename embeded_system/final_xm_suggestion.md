@@ -213,7 +213,7 @@ void loop()
 }
 ```
 
-## Storing data in EEPROM
+## Lecture 10: Storing data in EEPROM(ignoring)
 
 > An EEPROM is an Electrically Erasable
 Programmable Read-Only Memory. It is a form of non-volatile memory that can remember things with the power being turned off, or after resetting the Arduino. The beauty of this kind of memory is that we can store data generated within a sketch on a more permanent basis.
