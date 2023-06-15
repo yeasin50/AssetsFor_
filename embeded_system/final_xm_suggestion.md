@@ -2,6 +2,7 @@
 Feels most common
 >  reading lecture 6 & 7
 >  Code dim two LED + PIR
+>  [LDR light](code/control_light_with_LDR.md)
 ------
 ## Lecture 5
 ![image](https://github.com/yeasin50/AssetsFor_/assets/46500228/1563398e-0a87-45fd-afc6-7fa6f799dd1e)
