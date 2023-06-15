@@ -140,7 +140,7 @@ void loop()
 
 ```
 
-## Simulate a LED Dimmer
+## Simulate a LED Dimmer single
 ```ino
 int brightness = 0;
 void setup()
@@ -160,6 +160,50 @@ void loop()
     {
         analogWrite(9, brightness);
         delay(30); // Wait for 30 millisecond(s)
+    }
+}
+```
+
+# [*Dim left right](https://www.tinkercad.com/things/gMSpoJBtZdJ)
+
+![image](https://github.com/yeasin50/AssetsFor_/assets/46500228/cb8a7520-d44f-4635-8fdc-5f8c8a52b892)
+
+```ino
+// IO
+int leftLED = 11;
+int rightLED = 10;
+int brightness = 0;
+int delayInMilliseconds = 50;
+void setup()
+{
+    pinMode(leftLED, OUTPUT);
+    pinMode(rightLED, OUTPUT);
+    Serial.begin(9600);
+}
+
+void loop()
+{
+    for (brightness = 0; brightness <= 255;
+         brightness += 5)
+    {
+        analogWrite(leftLED, brightness);
+        analogWrite(rightLED, 255 - brightness);
+        Serial.print("Left LED: ");
+        Serial.println(brightness);
+        Serial.print("Right LED: ");
+        Serial.println(255 - brightness);
+        delay(delayInMilliseconds); // Wait for half a second
+    }
+    for (brightness = 255; brightness >= 0;
+         brightness -= 5)
+    {
+        analogWrite(leftLED, brightness);
+        analogWrite(rightLED, 255 - brightness);
+        Serial.print("Left LED: ");
+        Serial.println(brightness);
+        Serial.print("Right LED: ");
+        Serial.println(255 - brightness);
+        delay(delayInMilliseconds); // Wait for half a second
     }
 }
 ```
