@@ -1,0 +1,12 @@
+{
+  "packageName": "com.yeasin50.ek_sheba",
+  "version": "1.0.0",
+  "items": [
+    {
+      "name": "patchedEnabled",
+      "value": true,
+      "message": "controller"
+    }
+  ],
+  "updates": ["test..."]
+}
