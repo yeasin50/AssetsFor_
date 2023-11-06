@@ -6,6 +6,11 @@
       "name": "patchedEnabled",
       "value": false,
       "message": "controller"
+    },
+    {
+      "name": "moveForward",
+      "value": true,
+      "message": "Features has been updated.[err>> value:false]"
     }
   ],
   "updates": ["test..."]
