@@ -1,0 +1,12 @@
+{
+  "packageName": "com.yeasin50.fam_tree",
+  "version": "1.0.0",
+  "items": [
+    {
+      "name": "cloud",
+      "value": false,
+      "message": "Features has been removed. contact dev at yeasinsheikh50@gmail.com"
+    }
+  ],
+  "updates": ["init"]
+}
