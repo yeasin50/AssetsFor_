@@ -4,7 +4,7 @@
   "items": [
     {
       "name": "cloud",
-      "value": false,
+      "value": true,
       "message": "Features has been removed. contact dev at yeasinsheikh50@gmail.com"
     }
   ],
